@@ -5,6 +5,7 @@ public class Addition extends Expression
     private final double number1_;
     private final double number2_;
 
+
     public Addition(int number1, int number2)
     {
         number1_ = (double)number1;
@@ -30,7 +31,7 @@ public class Addition extends Expression
     }
 
     @Override
-    public Number eval()
+    public double eval()
     {
         return number1_ + number2_;
     }

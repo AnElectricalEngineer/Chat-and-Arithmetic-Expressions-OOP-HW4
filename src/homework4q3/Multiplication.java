@@ -30,7 +30,7 @@ public class Multiplication extends Expression
     }
 
     @Override
-    public Number eval()
+    public double eval()
     {
         return number1_ * number2_;
     }

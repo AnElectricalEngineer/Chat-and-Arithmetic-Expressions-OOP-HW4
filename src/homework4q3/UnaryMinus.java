@@ -15,7 +15,7 @@ public class UnaryMinus extends Expression
     }
 
     @Override
-    public Number eval()
+    public double eval()
     {
         return -number1_;
     }

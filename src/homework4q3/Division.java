@@ -32,7 +32,7 @@ public class Division extends Expression
     //TODO when writing rep invariant, add num2 cant be 0, maybe add that
     // throws except if so instead
     @Override
-    public Number eval()
+    public double eval()
     {
         return number1_ / number2_;
     }
