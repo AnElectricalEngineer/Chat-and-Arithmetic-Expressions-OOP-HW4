@@ -1,26 +1,43 @@
-package homework4;
+package homework4q2;
 
 import java.util.ArrayList;
 import java.util.List;
 
 /**
- * A Subject is a general class that observers can listen to. 
+ * A Subject is a general class that observers can listen to. //TODO add explan.
  */
 public class Subject
 {
     private final List<Observer> observers_ = new ArrayList<Observer>();
 
-
+    /**
+     * Description //TODO add
+     * @requires
+     * @modifies
+     * @effects
+     */
     public void attach(Observer observer)
     {
         observers_.add(observer);
     }
 
+    /**
+     * Description //TODO add
+     * @requires
+     * @modifies
+     * @effects
+     */
     public void detach(Observer observer)
     {
         observers_.remove(observer);
     }
 
+    /**
+     * Description //TODO add
+     * @requires
+     * @modifies
+     * @effects
+     */
     public void notifyObservers()
     {
         for(Observer observer : observers_)

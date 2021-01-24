@@ -1,4 +1,4 @@
-package homework4;
+package homework4q2;
 
 public interface Observer
 {
