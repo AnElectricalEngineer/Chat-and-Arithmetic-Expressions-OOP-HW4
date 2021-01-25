@@ -2,7 +2,12 @@ package homework4q2;
 
 import javax.swing.*;
 
+/**
+ * A TextStyle is an Interface used to change the font of the text of a
+ * JTextPane, using the Strategy design pattern. All implementing classes
+ * must implement the changeFont() method.
+ */
 public interface TextStyle
 {
-    public void changeFont(JTextPane pane);
+    void changeFont(JTextPane pane);
 }

@@ -5,6 +5,13 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
+/**
+ * ChatSystemGui is a class that implements the GUI of the the chat system.
+ * Here, the use is demonstrated with 3 users: Student1, Student2, Student3.
+ * Each user can send messages through their text box, and the message will
+ * be seen by all the current chat users. Each user can change the font of
+ * his/her chat box to be regular, bold, or alternate.
+ */
 public class ChatSystemGui
 {
     private ChatSystem chatSystem_;
