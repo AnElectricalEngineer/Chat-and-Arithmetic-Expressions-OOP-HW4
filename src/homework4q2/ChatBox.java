@@ -1,7 +1,6 @@
 package homework4q2;
 
 import java.util.ArrayList;
-import java.util.Iterator;
 import java.util.List;
 
 //TODO add description, abs func, rep invariant, checkRep, call checkrep, spec
@@ -29,4 +28,5 @@ public class ChatBox extends Subject
         }
         return sb.toString();
     }
+
 }
