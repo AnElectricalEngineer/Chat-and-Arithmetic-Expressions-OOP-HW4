@@ -6,8 +6,7 @@ import java.util.List;
 /**
  * A Subject is a model which represents an object which updates
  * all of its observers when it is modified. All implementing
- * classes must implement the attach(), detach(), and notifiyObservers()
- * methods.
+ * classes must implement the attach(), detach(), and notifyObservers() methods.
  *
  * The following fields are used in the specification:
  *
