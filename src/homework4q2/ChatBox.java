@@ -20,8 +20,13 @@ public class ChatBox extends Subject
         notifyObservers();
     }
 
-    public Iterator<String> getMessages()
+    public String getMessages()
     {
-        return messages_.iterator();
+        StringBuilder sb = new StringBuilder();
+        for(String message : messages_)
+        {
+            sb.append(message).append("\n");
+        }
+        return sb.toString();
     }
 }

@@ -2,7 +2,7 @@ package homework4q3;
 
 public class ExpressionTest
 {
-    public static void main(String[] args)
+    /*public static void main(String[] args)
     {
         Expression e = new Addition(Double.valueOf(1), Double.valueOf(3.4));
         System.out.println(e.eval());
@@ -23,5 +23,5 @@ public class ExpressionTest
         Expression i = new UnaryMinus(9);
         System.out.println(i.eval());
         System.out.println(i.toString());
-    }
+    }*/
 }

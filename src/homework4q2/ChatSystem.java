@@ -1,15 +1,35 @@
 package homework4q2;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class ChatSystem
 {
-    /*public static void main(String[] args)
-    {
-        ChatBox chatBox = new ChatBox();
-        User user1 = new User("Student1");
-        User user2 = new User("Student2");
-        chatBox.attach(user1);
-        chatBox.attach(user2);
-        chatBox.sendMessage("Hello");
-    }*/
+    private ChatBox chatBox_;
+    private List<User> users_;
 
+    public ChatSystem()
+    {
+        chatBox_ = new ChatBox();
+        users_ = new ArrayList<User>();
+    }
+
+    public void addUser(User user)
+    {
+        users_.add(user);
+        user.setChatBox(chatBox_);
+        chatBox_.attach(user);
+    }
+
+    public void removeUser(User user)
+    {
+        users_.remove(user);
+        chatBox_.detach(user);
+    }
+
+    public String getMessages()
+    {
+        return chatBox_.getMessages();
+    }
+    
 }
