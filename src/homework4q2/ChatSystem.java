@@ -31,5 +31,5 @@ public class ChatSystem
     {
         return chatBox_.getMessages();
     }
-    
+
 }

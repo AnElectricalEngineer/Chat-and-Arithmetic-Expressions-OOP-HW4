@@ -30,17 +30,31 @@ public class ChatSystemGui
         JPanel panel1 = new JPanel();
         JPanel panel2 = new JPanel();
         JPanel panel3 = new JPanel();
-        panel1.setLayout(new GridLayout(2, 1));
-        panel2.setLayout(new GridLayout(2, 1));
-        panel3.setLayout(new GridLayout(2, 1));
+        panel1.setLayout(new GridLayout(6, 1));
+        panel2.setLayout(new GridLayout(6, 1));
+        panel3.setLayout(new GridLayout(6, 1));
+
+        //Create the labels for each user's chat box
+        JLabel label1 = new JLabel("Chat box for User 1");
+        JLabel label2 = new JLabel("Chat box for User 2");
+        JLabel label3 = new JLabel("Chat box for User 3");
+        panel1.add(label1);
+        panel2.add(label2);
+        panel3.add(label3);
 
         //Create the text panes for displaying chat to each user
-        JTextArea area1 = new JTextArea();
+        JTextPane area1 = new JTextPane();
         area1.setEditable(false);
-        JTextArea area2 = new JTextArea();
+        JTextPane area2 = new JTextPane();
         area2.setEditable(false);
-        JTextArea area3 = new JTextArea();
+        JTextPane area3 = new JTextPane();
         area3.setEditable(false);
+
+        //Set the initial text style as regular
+        TextStyle initialTextStyle = new RegularTextStyle();
+        initialTextStyle.changeFont(area1);
+        initialTextStyle.changeFont(area2);
+        initialTextStyle.changeFont(area3);
 
         //Create the scroll panes for each user
         JScrollPane scrollPane1 = new JScrollPane(area1);
@@ -51,62 +65,174 @@ public class ChatSystemGui
         panel2.add(scrollPane2);
         panel3.add(scrollPane3);
 
+        scrollPane1.setPreferredSize(new Dimension(280, 60));
+        scrollPane2.setPreferredSize(new Dimension(280, 60));
+        scrollPane3.setPreferredSize(new Dimension(280, 60));
+
         //Create the text field for each user to enter text
         JTextField field1 = new JTextField(50);
         field1.addActionListener(new ActionListener()
-                              {
-                                  @Override
-                                  public void actionPerformed(ActionEvent e)
-                                  {
-                                      String newMessage = field1.getText();
-                                      user1.sendMessage(newMessage);
-                                      field1.setText(null);
-                                      area1.setText(chatSystem_.getMessages());
-                                      area2.setText(chatSystem_.getMessages());
-                                      area3.setText(chatSystem_.getMessages());
-                                  }
-                              }
-        );
+        {
+            @Override
+            public void actionPerformed(ActionEvent e)
+            {
+                String newMessage = field1.getText();
+                user1.sendMessage(newMessage);
+                field1.setText(null);
+                area1.setText(chatSystem_.getMessages());
+                area2.setText(chatSystem_.getMessages());
+                area3.setText(chatSystem_.getMessages());
+            }
+        });
 
         JTextField field2 = new JTextField(50);
         field2.addActionListener(new ActionListener()
-                                 {
-                                     @Override
-                                     public void actionPerformed(ActionEvent e)
-                                     {
-                                         String newMessage = field2.getText();
-                                         user2.sendMessage(newMessage);
-                                         field2.setText(null);
-                                         area1.setText(chatSystem_.getMessages());
-                                         area2.setText(chatSystem_.getMessages());
-                                         area3.setText(chatSystem_.getMessages());
-                                     }
-                                 }
-        );
+        {
+            @Override
+            public void actionPerformed(ActionEvent e)
+            {
+                String newMessage = field2.getText();
+                user2.sendMessage(newMessage);
+                field2.setText(null);
+                area1.setText(chatSystem_.getMessages());
+                area2.setText(chatSystem_.getMessages());
+                area3.setText(chatSystem_.getMessages());
+            }
+        });
 
         JTextField field3 = new JTextField(50);
         field3.addActionListener(new ActionListener()
-                                 {
-                                     @Override
-                                     public void actionPerformed(ActionEvent e)
-                                     {
-                                         String newMessage = field3.getText();
-                                         user3.sendMessage(newMessage);
-                                         field3.setText(null);
-                                         area1.setText(chatSystem_.getMessages());
-                                         area2.setText(chatSystem_.getMessages());
-                                         area3.setText(chatSystem_.getMessages());
-                                     }
-                                 }
-        );
+        {
+            @Override
+            public void actionPerformed(ActionEvent e)
+            {
+                String newMessage = field3.getText();
+                user3.sendMessage(newMessage);
+                field3.setText(null);
+                area1.setText(chatSystem_.getMessages());
+                area2.setText(chatSystem_.getMessages());
+                area3.setText(chatSystem_.getMessages());
+            }
+        });
+
         panel1.add(field1);
         panel2.add(field2);
         panel3.add(field3);
+
+        //Create the buttons for changing fonts
+        JButton regularFont1 = new JButton("Regular Font");
+        regularFont1.addActionListener(new ActionListener()
+        {
+            @Override
+            public void actionPerformed(ActionEvent e)
+            {
+                TextStyle regularTextStyle = new RegularTextStyle();
+                regularTextStyle.changeFont(area1);
+            }
+        });
+        panel1.add(regularFont1);
+
+        JButton boldFont1 = new JButton("Bold Font");
+        boldFont1.addActionListener(new ActionListener()
+        {
+            @Override
+            public void actionPerformed(ActionEvent e)
+            {
+                TextStyle boldTextStyle = new BoldTextStyle();
+                boldTextStyle.changeFont(area1);
+            }
+        });
+        panel1.add(boldFont1);
+
+        JButton alternateFont1 = new JButton("Alternate Font");
+        alternateFont1.addActionListener(new ActionListener()
+        {
+            @Override
+            public void actionPerformed(ActionEvent e)
+            {
+                TextStyle alternateTextStyle = new ArialTextStyle();
+                alternateTextStyle.changeFont(area1);
+            }
+        });
+        panel1.add(alternateFont1);
+
+        JButton regularFont2 = new JButton("Regular Font");
+        regularFont2.addActionListener(new ActionListener()
+        {
+            @Override
+            public void actionPerformed(ActionEvent e)
+            {
+                TextStyle regularTextStyle = new RegularTextStyle();
+                regularTextStyle.changeFont(area2);
+            }
+        });
+        panel2.add(regularFont2);
+
+        JButton boldFont2 = new JButton("Bold Font");
+        boldFont2.addActionListener(new ActionListener()
+        {
+            @Override
+            public void actionPerformed(ActionEvent e)
+            {
+                TextStyle boldTextStyle = new BoldTextStyle();
+                boldTextStyle.changeFont(area2);
+            }
+        });
+        panel2.add(boldFont2);
+
+        JButton alternateFont2 = new JButton("Alternate Font");
+        alternateFont2.addActionListener(new ActionListener()
+        {
+            @Override
+            public void actionPerformed(ActionEvent e)
+            {
+                TextStyle alternateTextStyle = new ArialTextStyle();
+                alternateTextStyle.changeFont(area2);
+            }
+        });
+        panel2.add(alternateFont2);
+
+        JButton regularFont3 = new JButton("Regular Font");
+        regularFont3.addActionListener(new ActionListener()
+        {
+            @Override
+            public void actionPerformed(ActionEvent e)
+            {
+                TextStyle regularTextStyle = new RegularTextStyle();
+                regularTextStyle.changeFont(area3);
+            }
+        });
+        panel3.add(regularFont3);
+
+        JButton boldFont3 = new JButton("Bold Font");
+        boldFont3.addActionListener(new ActionListener()
+        {
+            @Override
+            public void actionPerformed(ActionEvent e)
+            {
+                TextStyle boldTextStyle = new BoldTextStyle();
+                boldTextStyle.changeFont(area3);
+            }
+        });
+        panel3.add(boldFont3);
+
+        JButton alternateFont3 = new JButton("Alternate Font");
+        alternateFont3.addActionListener(new ActionListener()
+        {
+            @Override
+            public void actionPerformed(ActionEvent e)
+            {
+                TextStyle alternateTextStyle = new ArialTextStyle();
+                alternateTextStyle.changeFont(area3);
+            }
+        });
+        panel3.add(alternateFont3);
 
         //Add user panels to main panel
         mainPanel.add(panel1);
         mainPanel.add(panel2);
         mainPanel.add(panel3);
+
         return mainPanel;
     }
 
