@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * A ChatBox is a model which represents chat box of a chat system. It holds
+ * A ChatBox is a model which represents the chat box of a chat system. It holds
  * a list of all the messages that have been sent through the chat system
  * during a given chat session. ChatBoxes can be used as subjects, which
  * notify all of their observers when a new message is sent.
@@ -26,6 +26,12 @@ public class ChatBox extends Subject
     // For each message m_i in this.messages, m_i != null.
 
 
+    /**
+     * Constructs a new ChatBox
+     * @requires none
+     * @modifies this
+     * @effects Constructs a new ChatBox with an empty list of messages
+     */
     public ChatBox()
     {
         messages_ = new ArrayList<String>();
