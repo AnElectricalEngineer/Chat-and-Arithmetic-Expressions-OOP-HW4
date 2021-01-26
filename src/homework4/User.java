@@ -1,4 +1,4 @@
-package homework4q2;
+package homework4;
 
 /**
  * A User is a model that represents a single person who intends to use a

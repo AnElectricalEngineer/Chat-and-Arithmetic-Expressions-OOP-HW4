@@ -1,4 +1,4 @@
-package homework4q3;
+package homework4;
 
 /**
  * Represents an arithmetic expression of the form -A, where A is another

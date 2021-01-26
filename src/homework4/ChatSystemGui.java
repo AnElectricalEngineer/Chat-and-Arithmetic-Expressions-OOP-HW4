@@ -1,4 +1,4 @@
-package homework4q2;
+package homework4;
 
 import javax.swing.*;
 import java.awt.*;
@@ -253,8 +253,7 @@ public class ChatSystemGui
         chatSystem_.removeUser(user);
     }
 
-    //TODO uncomment this before turning in
-    /*public static void main(String[] args)
+    public static void main(String[] args)
     {
         ChatSystemGui chatSystemGui = new ChatSystemGui();
         JFrame mainFrame = new JFrame("Chat System");
@@ -263,5 +262,5 @@ public class ChatSystemGui
         mainFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         mainFrame.pack();
         mainFrame.setVisible(true);
-    }*/
+    }
 }

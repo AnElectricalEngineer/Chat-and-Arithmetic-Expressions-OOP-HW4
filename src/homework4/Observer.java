@@ -1,4 +1,4 @@
-package homework4q2;
+package homework4;
 
 /**
  * An Observer is a model which represents an object which must
