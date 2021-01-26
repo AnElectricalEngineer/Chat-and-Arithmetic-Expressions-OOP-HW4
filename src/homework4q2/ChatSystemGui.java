@@ -253,7 +253,8 @@ public class ChatSystemGui
         chatSystem_.removeUser(user);
     }
 
-    public static void main(String[] args)
+    //TODO uncomment this before turning in
+    /*public static void main(String[] args)
     {
         ChatSystemGui chatSystemGui = new ChatSystemGui();
         JFrame mainFrame = new JFrame("Chat System");
@@ -262,5 +263,5 @@ public class ChatSystemGui
         mainFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         mainFrame.pack();
         mainFrame.setVisible(true);
-    }
+    }*/
 }

@@ -2,26 +2,26 @@ package homework4q3;
 
 public class UnaryMinus extends Expression
 {
-    private final double number1_;
+    private final Expression number1_;
 
-    public UnaryMinus(int number1)
+    public UnaryMinus(Number number1)
     {
-        number1_ = (double)number1;
+        number1_ = new Constant(number1);
     }
 
-    public UnaryMinus(double number1)
+    public UnaryMinus(Expression number1)
     {
         number1_ = number1;
     }
 
     @Override
-    public double eval()
+    public Double eval()
     {
-        return -number1_;
+        return -number1_.eval();
     }
 
     public String toString()
     {
-        return "(-" + number1_ + ")";
+        return "(-" + number1_.toString() + ")";
     }
 }
