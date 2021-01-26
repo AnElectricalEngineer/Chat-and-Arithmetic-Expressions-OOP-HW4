@@ -1,5 +1,10 @@
 package homework4q3;
 
+/**
+ * This class can be used to test the implementation of Expressions. The
+ * first test is identical to the example given in the homework assignment,
+ * and the other tests test each of the different expressions.
+ */
 public class ExpressionTest
 {
     public static void main(String[] args)
