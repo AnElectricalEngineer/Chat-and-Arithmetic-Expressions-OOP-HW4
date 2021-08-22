@@ -1,6 +1,6 @@
 # Chat and Arithmetic Expressions
  
-This repository contains two unrelated programs which are both written in Java: a simple graphical chat application and a program that evaluates arithmetic expressions. 
+This repository contains two unrelated programs which are both written in Java: a simple graphical chat application and a program which evaluates arithmetic expressions. 
 
 ## About Chat
 
